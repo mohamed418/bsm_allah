@@ -1,6 +1,5 @@
+import 'package:bsm_allah/settings/view/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'challenge/view/screens/challenges_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,11 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ChallengesScreen(),
+      home: SettingsScreen(),
     );
   }
 }
-
-
-// 1- MVVM
-// view - view_model

@@ -13,9 +13,24 @@ class SettingsScreen extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Row(
             children: [
-              Expanded(child: SettingBox()),
+              Expanded(
+                  child: SettingBox(
+                icon: Icons.light_mode_outlined,
+                label1: '200',
+                label2: 'KW/',
+                label3: 'H',
+                labelType: 'Produced',
+              )),
               SizedBox(width: 10),
-              Expanded(child: SettingBox()),
+              Expanded(
+                child: SettingBox(
+                  icon: Icons.flash_on_outlined,
+                  label1: '120',
+                  label2: 'KW/',
+                  label3: 'H',
+                  labelType: 'Exported',
+                ),
+              ),
             ],
           ),
         ),

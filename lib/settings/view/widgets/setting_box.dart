@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class SettingBox extends StatelessWidget {
-  const SettingBox({super.key});
+
+  final IconData icon;
+  final String label1;
+  final String label2;
+  final String label3;
+  final String labelType;
+
+  const SettingBox({super.key, required this.icon, required this.label1, required this.label2, required this.label3, required this.labelType});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +32,7 @@ class SettingBox extends StatelessWidget {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
-                  child: Icon(Icons.light_mode_outlined, color: Colors.white),
+                  child: Icon(icon, color: Colors.white),
                 ),
               ),
             ),
@@ -34,14 +41,14 @@ class SettingBox extends StatelessWidget {
               TextSpan(
                 children: [
                   TextSpan(
-                    text: '200',
+                    text: label1,
                     style: TextStyle(
                       fontSize: 30,
                       color: Colors.white,
                     ),
                   ),
                   TextSpan(
-                    text: ' KW/H',
+                    text: ' ${label2 + label3}',
                     style: TextStyle(
                       fontSize: 15,
                       color: Colors.white,
@@ -52,7 +59,7 @@ class SettingBox extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'Produced',
+              labelType,
               style: TextStyle(fontSize: 20, color: Colors.white),
             ),
           ],

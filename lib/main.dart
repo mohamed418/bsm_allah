@@ -36,3 +36,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+//without comments and just build the updated widgets or methods not the full file
